@@ -8,7 +8,6 @@ import {
   Form,
   Icon,
   Message,
-  Button,
 } from "semantic-ui-react";
 
 import { saveOrUpdate } from "../../utils/store";
@@ -36,7 +35,8 @@ const Creator = ({ creator }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const id = location.pathname.slice(-2);
+    const id = location.pathname.split("/").find((el) => el.startsWith("C"));
+    // console.log(id);
     dispatch(selectedCreator(id));
   }, []);
 
