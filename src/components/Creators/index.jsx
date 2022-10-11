@@ -4,6 +4,7 @@ import { Icon } from "semantic-ui-react";
 
 import Card from "../Card";
 
+import { getTable } from "../../utils/store";
 import { fetchCreatorsAsync } from "../../actions";
 
 const Creators = ({ creators }) => {
@@ -14,7 +15,7 @@ const Creators = ({ creators }) => {
   }, []);
 
   const displayDonations = () => {
-    console.table(get(creator.id));
+    console.table(getTable());
   };
 
   return (

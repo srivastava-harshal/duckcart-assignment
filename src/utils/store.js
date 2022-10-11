@@ -16,7 +16,7 @@ export const saveOrUpdate = (key, value = {}) => {
   }
 };
 
-export const get = () => {
+export const getTable = () => {
   const data = { ...localStorage };
   const arr = [];
   Object.entries(data).forEach(([key, value]) => {
