@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          {/* <Header/> */}
           <Route path="/all-creators" element={<Creators />} />
           <Route path="/all-creators/:id" element={<Creator />} />
         </Routes>
